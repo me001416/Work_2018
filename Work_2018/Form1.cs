@@ -16,5 +16,13 @@ namespace Work_2018
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Json.Build.PowerBall mPowerBall = new Json.Build.PowerBall();
+            mPowerBall.Top = Top;
+            mPowerBall.Left = Left;
+            mPowerBall.ShowDialog();
+        }
     }
 }
