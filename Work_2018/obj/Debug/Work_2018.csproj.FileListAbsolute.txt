@@ -1,1 +1,9 @@
 G:\Code\C_Sharp\Work_2018\Work_2018\bin\Debug\Work_2018.exe.config
+G:\Code\C_Sharp\Work_2018\Work_2018\bin\Debug\Work_2018.exe
+G:\Code\C_Sharp\Work_2018\Work_2018\bin\Debug\Work_2018.pdb
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.csprojResolveAssemblyReference.cache
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.Json.Build.PowerBall.resources
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.Properties.Resources.resources
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.csproj.GenerateResource.Cache
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.exe
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.pdb

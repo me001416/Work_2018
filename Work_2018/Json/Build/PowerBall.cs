@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -100,6 +101,8 @@ namespace Work_2018.Json.Build
             StreamReader SR = new StreamReader(FileName, System.Text.Encoding.Default);
             string FileStr = SR.ReadToEnd();
             SR.Close();
+
+            FilterStr(FileStr);
         }
 
         private void FilterStr(string SrcStr)
@@ -120,7 +123,21 @@ namespace Work_2018.Json.Build
                     
                     continue;
                 }
+                else if (str == sep1)
+                {
+                    mStringBuilderList.Add(mStringBuilder);
+                    mStringBuilder = new StringBuilder();
+
+                    continue;
+                }
             }
+
+#if DEBUG
+            mStringBuilderList.ForEach(x =>
+            {
+                Trace.WriteLine(x);
+            });
+#endif
         }
     }
 }
