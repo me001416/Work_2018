@@ -12,7 +12,7 @@ namespace Work_2018.PowerBall
 
     }
 
-    class PowerBall
+    class BasePowerBall
     {
         //
         // List of number.
@@ -26,7 +26,7 @@ namespace Work_2018.PowerBall
         public int Day { get; private set; }
         public int Year { get; private set; }
 
-        public PowerBall()
+        public BasePowerBall()
         {
             NumList = new List<int>();
         }
