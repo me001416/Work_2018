@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -103,7 +104,23 @@ namespace Work_2018.Json.Build
 
         private void FilterStr(string SrcStr)
         {
+            List<StringBuilder> mStringBuilderList = new List<StringBuilder>();
+            StringBuilder mStringBuilder = new StringBuilder();
+            string sep1 = "\n";
+            string sep2 = ",";
 
+            for (var i = 0; i < SrcStr.Length; i++)
+            {
+                string str = StringInfo.GetNextTextElement(SrcStr, i);
+
+                if (str == sep2)
+                {
+                    mStringBuilderList.Add(mStringBuilder);
+                    mStringBuilder = new StringBuilder();
+                    
+                    continue;
+                }
+            }
         }
     }
 }
