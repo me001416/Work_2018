@@ -77,7 +77,7 @@ namespace Work_2018.Json.Build
             }
 
             FileInfo mFileInfo = new FileInfo(sfd.FileName);
-            Properties.Settings.Default.PowerBallDataPath = mFileInfo.DirectoryName;
+            Properties.Settings.Default.PowerBallSavePath = mFileInfo.DirectoryName;
             Properties.Settings.Default.Save();
 
             StreamWriter sw = new StreamWriter(sfd.FileName, false, System.Text.Encoding.Default);
@@ -107,6 +107,7 @@ namespace Work_2018.Json.Build
             StringBuilder mStringBuilder = new StringBuilder();
             string sep1 = "\n";
             string sep2 = ",";
+            string sep3 = "\t";
 #if DEBUG
             //Trace.WriteLine(SrcStr);
             //Trace.WriteLine("*******");
@@ -115,7 +116,7 @@ namespace Work_2018.Json.Build
             {
                 string str = StringInfo.GetNextTextElement(SrcStr, i);
 
-                if ((str == sep2) || (str == sep1))
+                if ((str == sep2) || (str == sep3) || (str == sep1))
                 {
                     mStringBuilderList.Add(mStringBuilder);
                     mStringBuilder = new StringBuilder();
