@@ -119,18 +119,11 @@ namespace Work_2018.Json.Build
             {
                 string str = StringInfo.GetNextTextElement(SrcStr, i);
 
-                if (str == sep2)
+                if ((str == sep2) || (str == sep1))
                 {
                     mStringBuilderList.Add(mStringBuilder);
                     mStringBuilder = new StringBuilder();
                     
-                    continue;
-                }
-                else if (str == sep1)
-                {
-                    mStringBuilderList.Add(mStringBuilder);
-                    mStringBuilder = new StringBuilder();
-
                     continue;
                 }
 
