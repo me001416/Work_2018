@@ -111,7 +111,10 @@ namespace Work_2018.Json.Build
             StringBuilder mStringBuilder = new StringBuilder();
             string sep1 = "\n";
             string sep2 = ",";
-
+#if DEBUG
+            Trace.WriteLine(SrcStr);
+            Trace.WriteLine("*******");
+#endif
             for (var i = 0; i < SrcStr.Length; i++)
             {
                 string str = StringInfo.GetNextTextElement(SrcStr, i);
@@ -130,12 +133,14 @@ namespace Work_2018.Json.Build
 
                     continue;
                 }
+
+                mStringBuilder.Append(str);
             }
 
 #if DEBUG
             mStringBuilderList.ForEach(x =>
             {
-                Trace.WriteLine(x);
+                Trace.WriteLine(x.ToString());
             });
 #endif
         }

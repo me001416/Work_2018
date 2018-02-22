@@ -7,3 +7,4 @@ G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.Properties.Resources.res
 G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.csproj.GenerateResource.Cache
 G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.exe
 G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.pdb
+G:\Code\C_Sharp\Work_2018\Work_2018\obj\Debug\Work_2018.Form1.resources
