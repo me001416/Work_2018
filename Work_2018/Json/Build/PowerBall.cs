@@ -137,7 +137,7 @@ namespace Work_2018.Json.Build
 
             ResultStr = mPowerBall.FormatFileData(mStringBuilderList);
 #if DEBUG
-            Trace.WriteLine(ResultStr);
+            //Trace.WriteLine(ResultStr);
 #endif
         }
     }

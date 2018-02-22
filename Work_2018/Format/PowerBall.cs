@@ -74,29 +74,44 @@ namespace Work_2018.Format
                 }
                 else if (Index == 7)
                 {
-                    mStringBuilder.Append(@"""Month"":""");
+                    mStringBuilder.Append(@"""M"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
                 else if (Index == 8)
                 {
-                    mStringBuilder.Append(@"""Day"":""");
+                    mStringBuilder.Append(@"""D"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
                 else if (Index == 9)
                 {
-                    mStringBuilder.Append(@"""Year"":""");
+                    mStringBuilder.Append(@"""Y"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@"""},");
+
+                    ///
+                    /// 分行，方便驗證結果
+                    ///
+                    mStringBuilder.Append("\n");
                 }
                 else
                 {
                     mStringBuilder.Append(SrcSbList[i]);
                 }
 
-                Index++;
+                if ((Index == 9) || (!char.IsNumber(SrcSbList[i].ToString().ToCharArray()[0])))
+                {
+                    Index = 0;
+                }
+                else
+                {
+                    Index++;
+                }
             }
+
+            mStringBuilder.Remove(mStringBuilder.Length - 2, 1);
+            mStringBuilder.Append("]}");
 
             return mStringBuilder.ToString();
         }
