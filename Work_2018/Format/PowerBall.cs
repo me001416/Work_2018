@@ -8,5 +8,6 @@ namespace Work_2018.Format
 {
     class PowerBall
     {
+
     }
 }

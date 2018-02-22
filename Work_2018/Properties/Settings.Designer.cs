@@ -34,5 +34,17 @@ namespace Work_2018.Properties {
                 this["PowerBallDataPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PowerBallSavePath {
+            get {
+                return ((string)(this["PowerBallSavePath"]));
+            }
+            set {
+                this["PowerBallSavePath"] = value;
+            }
+        }
     }
 }

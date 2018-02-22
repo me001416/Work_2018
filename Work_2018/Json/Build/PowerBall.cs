@@ -14,6 +14,7 @@ namespace Work_2018.Json.Build
     public partial class PowerBall : Form
     {
         string FileName;
+        string ResultStr;
 
         public PowerBall()
         {
@@ -39,8 +40,8 @@ namespace Work_2018.Json.Build
                 return;
             }
 
-            FileInfo fi = new FileInfo(ofg.FileName);
-            Properties.Settings.Default.PowerBallDataPath = fi.DirectoryName;
+            FileInfo mFileInfo = new FileInfo(ofg.FileName);
+            Properties.Settings.Default.PowerBallDataPath = mFileInfo.DirectoryName;
             Properties.Settings.Default.Save();
         }
 
@@ -55,6 +56,42 @@ namespace Work_2018.Json.Build
         }
 
         /// <summary>
+        /// 存檔
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.InitialDirectory = Properties.Settings.Default.PowerBallSavePath;
+
+            sfd.ShowDialog();
+
+            if (string.IsNullOrEmpty(sfd.FileName))
+            {
+                return;
+            }
+
+            if (string.IsNullOrEmpty(ResultStr))
+            {
+                return;
+            }
+
+            FileInfo mFileInfo = new FileInfo(sfd.FileName);
+            Properties.Settings.Default.PowerBallDataPath = mFileInfo.DirectoryName;
+            Properties.Settings.Default.Save();
+
+            StreamWriter sw = new StreamWriter(sfd.FileName, false, System.Text.Encoding.Default);
+
+            await sw.WriteAsync(ResultStr);
+            sw.Close();
+
+            MessageBox.Show("存檔完成", "存檔");
+            Close();
+        }
+
+        /// <summary>
         /// 用 StreamReader 來進行檔案讀取
         /// </summary>
         private void FileLoad()
@@ -62,6 +99,11 @@ namespace Work_2018.Json.Build
             StreamReader SR = new StreamReader(FileName, System.Text.Encoding.Default);
             string FileStr = SR.ReadToEnd();
             SR.Close();
+        }
+
+        private void FilterStr(string SrcStr)
+        {
+
         }
     }
 }
