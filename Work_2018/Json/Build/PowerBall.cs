@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -112,8 +108,8 @@ namespace Work_2018.Json.Build
             string sep1 = "\n";
             string sep2 = ",";
 #if DEBUG
-            Trace.WriteLine(SrcStr);
-            Trace.WriteLine("*******");
+            //Trace.WriteLine(SrcStr);
+            //Trace.WriteLine("*******");
 #endif
             for (var i = 0; i < SrcStr.Length; i++)
             {
@@ -131,10 +127,17 @@ namespace Work_2018.Json.Build
             }
 
 #if DEBUG
-            mStringBuilderList.ForEach(x =>
-            {
-                Trace.WriteLine(x.ToString());
-            });
+            //mStringBuilderList.ForEach(x =>
+            //{
+            //    Trace.WriteLine(x.ToString());
+            //});
+#endif
+
+            Format.PowerBall mPowerBall = new Format.PowerBall();
+
+            ResultStr = mPowerBall.FormatFileData(mStringBuilderList);
+#if DEBUG
+            Trace.WriteLine(ResultStr);
 #endif
         }
     }
