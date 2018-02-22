@@ -22,63 +22,69 @@ namespace Work_2018.Format
             ///
             mStringBuilder.Append("\n");
 
+            int Index = 0;
+
             for (var i = 0; i < SrcSbList.Count; i++)
             {
-                if ((i == 0) || ((i % 11) == 0))
+                if (!char.IsNumber(SrcSbList[i].ToString().ToCharArray()[0]))
+                {
+                    Index = 0;
+                }
+                else if (Index == 0)
                 {
                     mStringBuilder.Append(@"{""Num1"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 1) || ((i % 12) == 0))
+                else if (Index == 1)
                 {
                     mStringBuilder.Append(@"""Num2"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 2) || ((i % 13) == 0))
+                else if (Index == 2)
                 {
                     mStringBuilder.Append(@"""Num3"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 3) || ((i % 14) == 0))
+                else if (Index == 3)
                 {
                     mStringBuilder.Append(@"""Num4"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 4) || ((i % 15) == 0))
+                else if (Index == 4)
                 {
                     mStringBuilder.Append(@"""Num5"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 5) || ((i % 16) == 0))
+                else if (Index == 5)
                 {
                     mStringBuilder.Append(@"""Num6"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 6) || ((i % 17) == 0))
+                else if (Index == 6)
                 {
                     mStringBuilder.Append(@"""Num7"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 7) || ((i % 18) == 0))
+                else if (Index == 7)
                 {
                     mStringBuilder.Append(@"""Month"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 8) || ((i % 19) == 0))
+                else if (Index == 8)
                 {
                     mStringBuilder.Append(@"""Day"":""");
                     mStringBuilder.Append(SrcSbList[i]);
                     mStringBuilder.Append(@""",");
                 }
-                else if ((i == 9) || ((i % 10) == 0))
+                else if (Index == 9)
                 {
                     mStringBuilder.Append(@"""Year"":""");
                     mStringBuilder.Append(SrcSbList[i]);
@@ -88,6 +94,8 @@ namespace Work_2018.Format
                 {
                     mStringBuilder.Append(SrcSbList[i]);
                 }
+
+                Index++;
             }
 
             return mStringBuilder.ToString();
