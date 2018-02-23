@@ -68,6 +68,12 @@ namespace Work_2018.PowerBall
                 BasePowerBall mBasePowerBall = new BasePowerBall();
 
                 mBasePowerBall.Add(item.Num1);
+                mBasePowerBall.Add(item.Num2);
+                mBasePowerBall.Add(item.Num3);
+                mBasePowerBall.Add(item.Num4);
+                mBasePowerBall.Add(item.Num5);
+                mBasePowerBall.Add(item.Num6);
+                mBasePowerBall.Add(item.Num7);
             }
         }
     }
