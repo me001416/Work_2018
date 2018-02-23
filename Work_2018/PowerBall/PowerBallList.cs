@@ -15,5 +15,10 @@ namespace Work_2018.PowerBall
         {
             PList = new List<BasePowerBall>();
         }
+
+        public void Add (BasePowerBall SrcBasePowerBall)
+        {
+            PList.Add(SrcBasePowerBall);
+        }
     }
 }

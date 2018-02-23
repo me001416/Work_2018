@@ -57,6 +57,8 @@ namespace Work_2018.PowerBall
             SR.Close();
 
             SaveJson = JsonConvert.DeserializeObject(FileStr);
+
+            FillOutPowerBallList();
         }
 
         private void FillOutPowerBallList()
@@ -74,6 +76,14 @@ namespace Work_2018.PowerBall
                 mBasePowerBall.Add(item.Num5);
                 mBasePowerBall.Add(item.Num6);
                 mBasePowerBall.Add(item.Num7);
+
+                mBasePowerBall.SetMouth(item.M);
+                mBasePowerBall.SetDay(item.D);
+                mBasePowerBall.SetYear(item.Y);
+
+                mBasePowerBall.Sort();
+
+                gPowerBallList.Add(mBasePowerBall);
             }
         }
     }
