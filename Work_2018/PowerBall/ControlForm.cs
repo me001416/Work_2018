@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Work_2018.PowerBall
     public partial class ControlForm : Form
     {
         string FileName;
+        dynamic SaveJson;
 
         public ControlForm()
         {
@@ -38,5 +40,24 @@ namespace Work_2018.PowerBall
             Properties.Settings.Default.PowerBallSavePath = mFileInfo.DirectoryName;
             Properties.Settings.Default.Save();
         }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            await Task.Run(() => FileLoad());
+        }
+
+        /// <summary>
+        /// 用 StreamReader 來進行檔案讀取
+        /// </summary>
+        private void FileLoad()
+        {
+            StreamReader SR = new StreamReader(FileName, System.Text.Encoding.Default);
+            string FileStr = SR.ReadToEnd();
+            SR.Close();
+
+            SaveJson = JsonConvert.DeserializeObject(FileStr);
+        }
+
+
     }
 }
