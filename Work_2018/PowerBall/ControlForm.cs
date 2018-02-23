@@ -16,6 +16,7 @@ namespace Work_2018.PowerBall
     {
         string FileName;
         dynamic SaveJson;
+        PowerBallList gPowerBallList;
 
         public ControlForm()
         {
@@ -58,6 +59,16 @@ namespace Work_2018.PowerBall
             SaveJson = JsonConvert.DeserializeObject(FileStr);
         }
 
+        private void FillOutPowerBallList()
+        {
+            gPowerBallList = new PowerBallList();
 
+            foreach (dynamic item in SaveJson.PowerBall)
+            {
+                BasePowerBall mBasePowerBall = new BasePowerBall();
+
+                mBasePowerBall.Add(item.Num1);
+            }
+        }
     }
 }
