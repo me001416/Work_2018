@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define DEBUG
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -16,6 +18,9 @@ namespace Work_2018.Json.Build
 
         public PowerBall()
         {
+#if DEBUG
+            Trace.WriteLine(DateTime.Now + "Json.Build.PowerBall Start");
+#endif
             InitializeComponent();
         }
 
@@ -35,6 +40,9 @@ namespace Work_2018.Json.Build
 
             if (string.IsNullOrEmpty(ofg.FileName))
             {
+#if DEBUG
+                Trace.WriteLine(DateTime.Now + "FileName error");
+#endif
                 return;
             }
 
@@ -126,14 +134,12 @@ namespace Work_2018.Json.Build
 
                 mStringBuilder.Append(str);
             }
-
 #if DEBUG
             //mStringBuilderList.ForEach(x =>
             //{
             //    Trace.WriteLine(x.ToString());
             //});
 #endif
-
             Format.PowerBall mPowerBall = new Format.PowerBall();
 
             ResultStr = mPowerBall.FormatFileData(mStringBuilderList);
