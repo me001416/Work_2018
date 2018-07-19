@@ -25,20 +25,11 @@ namespace Work_2018.PowerBall
 
         public void Dump()
         {
-#if DEBUG
+#if DEBUG0
             PList.ForEach(x =>
             {
                 Trace.WriteLine(DateTime.Now);
-                Trace.WriteLine(x.NumList[0] + " ");
-                Trace.WriteLine(x.NumList[1] + " ");
-                Trace.WriteLine(x.NumList[2] + " ");
-                Trace.WriteLine(x.NumList[3] + " ");
-                Trace.WriteLine(x.NumList[4] + " ");
-                Trace.WriteLine(x.NumList[5] + " ");
-                Trace.WriteLine(x.NumList[6] + " ");
-                Trace.WriteLine(x.Mouth + " ");
-                Trace.WriteLine(x.Day + " ");
-                Trace.WriteLine(x.Year + " ");
+                Trace.WriteLine(x.NumList[0] + " " + x.NumList[1] + " " + x.NumList[2] + " " + x.NumList[3] + " " + x.NumList[4] + " " + x.NumList[5] + " " + x.NumList[6] + " " + x.Mouth + " " + x.Day + " " + x.Year + " ");
             });
 #endif
         }
