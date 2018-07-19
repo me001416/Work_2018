@@ -29,5 +29,13 @@ namespace Work_2018
             Trace.WriteLine(DateTime.Now + "SourceFile End");
 #endif
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PowerBall.ControlForm mControlForm = new PowerBall.ControlForm();
+            mControlForm.Top = Top;
+            mControlForm.Left = Left;
+            mControlForm.ShowDialog();
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace Work_2018.PowerBall
         /// </summary>
         public void SetDay(int SrcDay)
         {
-            if (SrcDay < 1 || SrcDay > 12)
+            if (SrcDay < 1 || SrcDay > 31)
             {
 #if DEBUG
                 Trace.WriteLine("Wrong SrcDay : " + SrcDay);

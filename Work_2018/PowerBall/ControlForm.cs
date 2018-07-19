@@ -69,22 +69,24 @@ namespace Work_2018.PowerBall
             {
                 BasePowerBall mBasePowerBall = new BasePowerBall();
 
-                mBasePowerBall.Add(item.Num1);
-                mBasePowerBall.Add(item.Num2);
-                mBasePowerBall.Add(item.Num3);
-                mBasePowerBall.Add(item.Num4);
-                mBasePowerBall.Add(item.Num5);
-                mBasePowerBall.Add(item.Num6);
-                mBasePowerBall.Add(item.Num7);
+                mBasePowerBall.Add(item.Num1.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num2.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num3.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num4.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num5.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num6.ToObject<Int32>());
+                mBasePowerBall.Add(item.Num7.ToObject<Int32>());
 
-                mBasePowerBall.SetMouth(item.M);
-                mBasePowerBall.SetDay(item.D);
-                mBasePowerBall.SetYear(item.Y);
+                mBasePowerBall.SetMouth(item.M.ToObject<Int32>());
+                mBasePowerBall.SetDay(item.D.ToObject<Int32>());
+                mBasePowerBall.SetYear(item.Y.ToObject<Int32>());
 
                 mBasePowerBall.Sort();
 
                 gPowerBallList.Add(mBasePowerBall);
             }
+
+            gPowerBallList.Dump();
         }
     }
 }
