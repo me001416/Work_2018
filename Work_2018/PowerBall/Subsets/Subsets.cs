@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace PowerBall
+namespace PowerBall.Subsets
 {
     /// <summary>
     /// Subsets of combination.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PowerBall
+namespace PowerBall.Subsets
 {
     public class SubsetsList
     {

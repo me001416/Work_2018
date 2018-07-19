@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace Work_2018.PowerBall
+namespace PowerBall
 {
     class BasePowerBall
     {

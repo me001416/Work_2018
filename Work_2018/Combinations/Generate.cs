@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Work_2018.Combination
+namespace Combination
 {
     /// <summary>
     /// Combination functions.

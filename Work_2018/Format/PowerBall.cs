@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Work_2018.Format
+namespace Format
 {
     class PowerBall
     {
