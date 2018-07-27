@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define DEBUG
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -104,6 +105,29 @@ namespace PowerBall
         public void Sort()
         {
             NumList.Sort();
+        }
+
+        public void BuildSubsets()
+        {
+            Combination.Generate mCombinations = new Combination.Generate();
+            List<List<int>> mListOfNumList = new List<List<int>>();
+
+            if (NumList.Count == 0)
+            {
+                Trace.WriteLine(DateTime.Now + "Error : NumList.Count == 0");
+            }
+
+            if (NumList.Count == 7)
+            {
+                GetSubsetFromList(mCombinations.NewCombine(NumList, 3));
+                GetSubsetFromList(mCombinations.NewCombine(NumList, 4));
+                GetSubsetFromList(mCombinations.NewCombine(NumList, 5));
+                GetSubsetFromList(mCombinations.NewCombine(NumList, 6));
+            }
+            else
+            {
+                Trace.WriteLine(DateTime.Now + "Error : NumList.Count = " + NumList.Count.ToString());
+            }
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿#define DEBUG
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Combination;
 
 namespace PowerBall
 {
@@ -25,7 +25,7 @@ namespace PowerBall
 
         public void Dump()
         {
-#if DEBUG
+#if DEBUGN
             PList.ForEach(x =>
             {
                 Trace.WriteLine(DateTime.Now);
