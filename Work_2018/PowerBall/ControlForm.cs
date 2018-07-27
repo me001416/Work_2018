@@ -70,13 +70,13 @@ namespace Work_2018.PowerBall
             {
                 BasePowerBall mBasePowerBall = new BasePowerBall();
 
-                mBasePowerBall.Add(item.Num1.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num2.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num3.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num4.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num5.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num6.ToObject<Int32>());
-                mBasePowerBall.Add(item.Num7.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num1.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num2.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num3.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num4.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num5.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num6.ToObject<Int32>());
+                mBasePowerBall.Add((byte)item.Num7.ToObject<Int32>());
 
                 mBasePowerBall.SetMouth(item.M.ToObject<Int32>());
                 mBasePowerBall.SetDay(item.D.ToObject<Int32>());

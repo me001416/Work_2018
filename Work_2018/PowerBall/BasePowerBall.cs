@@ -12,7 +12,7 @@ namespace PowerBall
         //
         // List of number.
         //
-        public List<int> NumList { get; private set; }
+        public List<byte> NumList { get; private set; }
 
         //
         // mm/dd/yyyy
@@ -23,7 +23,7 @@ namespace PowerBall
 
         public BasePowerBall()
         {
-            NumList = new List<int>();
+            NumList = new List<byte>();
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace PowerBall
         /// 加入數據
         /// </summary>
         /// <param name="SrcNum"></param>
-        public void Add(int SrcNum)
+        public void Add(byte SrcNum)
         {
             if (SrcNum < 1 || SrcNum > 49)
             {
