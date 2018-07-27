@@ -78,9 +78,9 @@ namespace Work_2018.PowerBall
                 mBasePowerBall.Add((byte)item.Num6.ToObject<Int32>());
                 mBasePowerBall.Add((byte)item.Num7.ToObject<Int32>());
 
-                mBasePowerBall.SetMouth(item.M.ToObject<Int32>());
-                mBasePowerBall.SetDay(item.D.ToObject<Int32>());
-                mBasePowerBall.SetYear(item.Y.ToObject<Int32>());
+                mBasePowerBall.SetMouth((byte)item.M.ToObject<Int32>());
+                mBasePowerBall.SetDay((byte)item.D.ToObject<Int32>());
+                mBasePowerBall.SetYear((short)item.Y.ToObject<Int32>());
 
                 mBasePowerBall.Sort();
 

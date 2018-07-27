@@ -25,7 +25,7 @@ namespace PowerBall
 
         public void Dump()
         {
-#if DEBUGN
+#if DEBUG
             PList.ForEach(x =>
             {
                 Trace.WriteLine(DateTime.Now);

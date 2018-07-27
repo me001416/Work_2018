@@ -17,10 +17,13 @@ namespace PowerBall
         //
         // mm/dd/yyyy
         //
-        public int Mouth { get; private set; }
-        public int Day { get; private set; }
-        public int Year { get; private set; }
+        public byte Mouth { get; private set; }
+        public byte Day { get; private set; }
+        public short Year { get; private set; }
 
+        /// <summary>
+        /// 建構函數
+        /// </summary>
         public BasePowerBall()
         {
             NumList = new List<byte>();
@@ -29,7 +32,7 @@ namespace PowerBall
         /// <summary>
         /// 設定 Day
         /// </summary>
-        public void SetDay(int SrcDay)
+        public void SetDay(byte SrcDay)
         {
             if (SrcDay < 1 || SrcDay > 31)
             {
@@ -46,7 +49,7 @@ namespace PowerBall
         /// <summary>
         /// 設定 Mouth
         /// </summary>
-        public void SetMouth(int SrcMouth)
+        public void SetMouth(byte SrcMouth)
         {
             if (SrcMouth < 1 || SrcMouth > 12)
             {
@@ -63,7 +66,7 @@ namespace PowerBall
         /// <summary>
         /// 設定 Year
         /// </summary>
-        public void SetYear(int SrcYear)
+        public void SetYear(short SrcYear)
         {
             if (SrcYear < 2010 || SrcYear > 2025)
             {
