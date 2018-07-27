@@ -8,21 +8,32 @@ namespace PowerBall.Subsets
     /// </summary>
     public class Subsets
     {
-        public string Name { get; private set; }
-        public int Count { get; private set; }
-        public List<int> numList { get; private set; }
+        //public string Name { get; private set; }
+        //public int Count { get; private set; }
+        public List<byte> numList { get; private set; }
 
         /// <summary>
         /// 建構函數
         /// </summary>
         /// <param name="SrcNumList">資料來源</param>
-        public Subsets(List<int> SrcNumList, int SrcCount)
+        public Subsets(List<byte> SrcNumList, int SrcCount)
         {
             numList = SrcNumList;
-            Name = BuildName(numList);
-            Count = SrcCount;
+            //Name = BuildName(numList);
+            //Count = SrcCount;
         }
 
+        /// <summary>
+        /// 建構函數
+        /// </summary>
+        /// <param name="SrcNumList">資料來源</param>
+        public Subsets(List<byte> SrcNumList)
+        {
+            numList = SrcNumList;
+            //Name = BuildName(numList);
+            //Count = SrcCount;
+        }
+#if false
         private string BuildName(List<int> SrcNumList)
         {
             string str = string.Empty;
@@ -39,10 +50,12 @@ namespace PowerBall.Subsets
 
             return str;
         }
+#endif
 
         /// <summary>
         /// 長度
         /// </summary>
+        /// <returns>回傳長度</returns>
         public int Length()
         {
             return numList.Count;

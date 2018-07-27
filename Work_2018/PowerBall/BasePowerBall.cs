@@ -15,6 +15,8 @@ namespace PowerBall
         //
         public List<byte> NumList { get; private set; }
 
+        public Subsets.SubsetsList mSubsetsList { get; private set; }
+
         //
         // mm/dd/yyyy
         //
@@ -28,6 +30,7 @@ namespace PowerBall
         public BasePowerBall()
         {
             NumList = new List<byte>();
+            mSubsetsList = new Subsets.SubsetsList();
         }
 
         /// <summary>
@@ -107,14 +110,17 @@ namespace PowerBall
             NumList.Sort();
         }
 
+        /// <summary>
+        /// 產生 NumList 的每一種排列組合
+        /// </summary>
         public void BuildSubsets()
         {
             Combination.Generate mCombinations = new Combination.Generate();
-            List<List<int>> mListOfNumList = new List<List<int>>();
 
             if (NumList.Count == 0)
             {
                 Trace.WriteLine(DateTime.Now + "Error : NumList.Count == 0");
+                return;
             }
 
             if (NumList.Count == 7)
@@ -128,6 +134,18 @@ namespace PowerBall
             {
                 Trace.WriteLine(DateTime.Now + "Error : NumList.Count = " + NumList.Count.ToString());
             }
+        }
+
+        /// <summary>
+        /// 把排列組合放進 mSubsetsList
+        /// </summary>
+        private void GetSubsetFromList(List<List<byte>> mListOfNumList)
+        {
+            mListOfNumList.ForEach(x =>
+            {
+                Subsets.Subsets tempSubset = new Subsets.Subsets(x);
+                mSubsetsList.Add(tempSubset);
+            });
         }
     }
 }

@@ -83,6 +83,7 @@ namespace Work_2018.PowerBall
                 mBasePowerBall.SetYear((short)item.Y.ToObject<Int32>());
 
                 mBasePowerBall.Sort();
+                mBasePowerBall.BuildSubsets();
 
                 gPowerBallList.Add(mBasePowerBall);
             }

@@ -5,7 +5,6 @@ namespace PowerBall.Subsets
     public class SubsetsList
     {
         public List<Subsets> mSubsetsList { get; private set; }
-        //public List<IntervalRecord> mIntervalRecordList { get; private set; }
 
         /// <summary>
         /// 建構函數
