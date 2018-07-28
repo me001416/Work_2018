@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PowerBall
 {
-    class PowerBallList
+    public class PowerBallList
     {
         /// <summary>
         /// List Of PowerBall.

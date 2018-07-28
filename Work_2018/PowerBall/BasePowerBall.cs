@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace PowerBall
 {
-    class BasePowerBall
+    public class BasePowerBall
     {
         //
         // List of number.
