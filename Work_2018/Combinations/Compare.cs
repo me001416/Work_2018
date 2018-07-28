@@ -14,7 +14,12 @@ namespace Combination
     {
         public void Between(BasePowerBall Target, BasePowerBall Src)
         {
-            if(!_Check(Target) || !_Check(Src))
+            bool M3 = false;
+            bool M4 = false;
+            bool M5 = false;
+            bool M6 = false;
+
+            if (!_Check(Target) || !_Check(Src))
             {
                 return;
             }
@@ -30,28 +35,28 @@ namespace Combination
                             {
                                 goto default;
                             }
-                            _CompareElement(x, y);
+                            M3 = _CompareElement(x, y);
                             break;
                         case 4:
                             if (y.Length() != 4)
                             {
                                 goto default;
                             }
-                            _CompareElement(x, y);
+                            M4 = _CompareElement(x, y);
                             break;
                         case 5:
                             if (y.Length() != 5)
                             {
                                 goto default;
                             }
-                            _CompareElement(x, y);
+                            M5 = _CompareElement(x, y);
                             break;
                         case 6:
                             if (y.Length() != 6)
                             {
                                 goto default;
                             }
-                            _CompareElement(x, y);
+                            M6 = _CompareElement(x, y);
                             break;
 
                         default:
