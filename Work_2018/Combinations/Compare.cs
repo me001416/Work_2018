@@ -12,13 +12,18 @@ namespace Combination
 {
     public class Compare
     {
+        public SubsetsList mSubsetsList;
+
+        /// <summary>
+        /// 建構函數
+        /// </summary>
+        public Compare()
+        {
+            mSubsetsList = new SubsetsList();
+        }
+
         public void Between(BasePowerBall Target, BasePowerBall Src)
         {
-            bool M3 = false;
-            bool M4 = false;
-            bool M5 = false;
-            bool M6 = false;
-
             if (!_Check(Target) || !_Check(Src))
             {
                 return;
@@ -35,28 +40,44 @@ namespace Combination
                             {
                                 goto default;
                             }
-                            M3 = _CompareElement(x, y);
+                            
+                            if (_CompareElement(x, y))
+                            {
+                                mSubsetsList.Add(y);
+                            }
                             break;
                         case 4:
                             if (y.Length() != 4)
                             {
                                 goto default;
                             }
-                            M4 = _CompareElement(x, y);
+
+                            if (_CompareElement(x, y))
+                            {
+                                mSubsetsList.Add(y);
+                            }
                             break;
                         case 5:
                             if (y.Length() != 5)
                             {
                                 goto default;
                             }
-                            M5 = _CompareElement(x, y);
+
+                            if (_CompareElement(x, y))
+                            {
+                                mSubsetsList.Add(y);
+                            }
                             break;
                         case 6:
                             if (y.Length() != 6)
                             {
                                 goto default;
                             }
-                            M6 = _CompareElement(x, y);
+
+                            if (_CompareElement(x, y))
+                            {
+                                mSubsetsList.Add(y);
+                            }
                             break;
 
                         default:
