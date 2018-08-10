@@ -65,6 +65,7 @@
       <DependentUpon>PowerBall.cs</DependentUpon>
     </Compile>
     <Compile Include="Math\Combinations.cs" />
+    <Compile Include="Math\RandomNum.cs" />
     <Compile Include="PowerBall\BasePowerBall.cs" />
     <Compile Include="PowerBall\ControlForm.cs">
       <SubType>Form</SubType>

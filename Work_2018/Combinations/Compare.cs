@@ -68,6 +68,11 @@ namespace Combination
 
         bool _CompareElement(Subsets Src1, Subsets Src2)
         {
+            if (Src1.Length() != Src2.Length())
+            {
+                return false;
+            }
+
             if (Src1.numList[0] != Src2.numList[0])
             {
                 return false;
@@ -83,42 +88,31 @@ namespace Combination
                 return false;
             }
 
-            if ((Src1.Length() == 3) && (Src2.Length() == 3))
+            if (Src1.Length() > 3)
             {
-                return true;
+                if (Src1.numList[3] != Src2.numList[3])
+                {
+                    return false;
+                }
+
+                if (Src1.Length() > 4)
+                {
+                    if (Src1.numList[4] != Src2.numList[4])
+                    {
+                        return false;
+                    }
+
+                    if (Src1.Length() > 5)
+                    {
+                        if (Src1.numList[5] != Src2.numList[5])
+                        {
+                            return false;
+                        }
+                    }
+                }
             }
 
-            if (Src1.numList[3] != Src2.numList[3])
-            {
-                return false;
-            }
-
-            if ((Src1.Length() == 4) && (Src2.Length() == 4))
-            {
-                return true;
-            }
-
-            if (Src1.numList[4] != Src2.numList[4])
-            {
-                return false;
-            }
-
-            if ((Src1.Length() == 5) && (Src2.Length() == 5))
-            {
-                return true;
-            }
-
-            if (Src1.numList[5] != Src2.numList[5])
-            {
-                return false;
-            }
-
-            if ((Src1.Length() == 6) && (Src2.Length() == 6))
-            {
-                return true;
-            }
-
-            return false;
+            return true;
         }
 
         bool _Check(BasePowerBall Src)
