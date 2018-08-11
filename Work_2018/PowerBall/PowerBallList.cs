@@ -41,12 +41,13 @@ namespace PowerBall
             short Loop;
             short SrcIndex;
 
-            for (Index = 0; Index < PList.Count; Index++)
+            for (Index = (short)(PList.Count - 1); Index > 0; Index--)
             {
-                for (Loop = Index; Loop < PList.Count; Loop++)
+                for (Loop = Index; Loop < 0; Loop--)
                 {
-                    SrcIndex = (short)(Loop + 1);
-                    if (SrcIndex != PList.Count)
+                    SrcIndex = (short)(Loop - 1);
+
+                    if (SrcIndex >= 0)
                     {
                         PList[Index].mCompare.Between(PList[Index], PList[SrcIndex]);
                     }
