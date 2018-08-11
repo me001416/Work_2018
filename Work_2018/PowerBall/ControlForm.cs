@@ -89,6 +89,9 @@ namespace Work_2018.PowerBall
             }
 
             gPowerBallList.Dump();
+
+            gPowerBallList.Compare();
+            gPowerBallList.Dump_Compare();
         }
     }
 }

@@ -152,5 +152,18 @@ namespace Combination
 
             return true;
         }
+
+        /// <summary>
+        /// 將加入的資料 Dump 出來
+        /// </summary>
+        public void Dump()
+        {
+#if DEBUG
+            mSubsetsList.mSubsetsList.ForEach(x =>
+            {
+                x.Dump();
+            });
+#endif
+        }
     }
 }

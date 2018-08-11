@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#define DEBUG
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace PowerBall.Subsets
@@ -51,7 +52,6 @@ namespace PowerBall.Subsets
             return str;
         }
 #endif
-
         /// <summary>
         /// 長度
         /// </summary>
@@ -59,6 +59,33 @@ namespace PowerBall.Subsets
         public int Length()
         {
             return numList.Count;
+        }
+
+        /// <summary>
+        /// 將加入的資料 Dump 出來
+        /// </summary>
+        public void Dump()
+        {
+#if DEBUG
+            switch(numList.Count)
+            {
+                case 3:
+                    Trace.WriteLine("[" + numList[0] + "][" + numList[1] + "][" + numList[2] + "]");
+                    break;
+                case 4:
+                    Trace.WriteLine("[" + numList[0] + "][" + numList[1] + "][" + numList[2] + "][" + numList[3] + "]");
+                    break;
+                case 5:
+                    Trace.WriteLine("[" + numList[0] + "][" + numList[1] + "][" + numList[2] + "][" + numList[3] + "][" + numList[4] + "]");
+                    break;
+                case 6:
+                    Trace.WriteLine("[" + numList[0] + "][" + numList[1] + "][" + numList[2] + "][" + numList[3] + "][" + numList[4] + "][" + numList[5] + "]");
+                    break;
+                default:
+                    Trace.WriteLine("Subsets::Dump Error");
+                    break;
+            }
+#endif
         }
     } /// public class Subsets
 } /// namespace PowerBall

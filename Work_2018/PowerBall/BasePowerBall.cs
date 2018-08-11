@@ -17,6 +17,8 @@ namespace PowerBall
 
         public Subsets.SubsetsList mSubsetsList { get; private set; }
 
+        public Combination.Compare mCompare { get; private set; }
+
         //
         // mm/dd/yyyy
         //
@@ -31,6 +33,7 @@ namespace PowerBall
         {
             NumList = new List<byte>();
             mSubsetsList = new Subsets.SubsetsList();
+            mCompare = new Combination.Compare();
         }
 
         /// <summary>
